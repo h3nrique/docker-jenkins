@@ -1,5 +1,6 @@
 FROM jenkins/jenkins:lts-jdk11
 MAINTAINER Paulo Henrique Alves <paulohenriqueas13@gmail.com>
+HEALTHCHECK --interval=30s --timeout=3s CMD curl --fail http://localhost:8080/login || exit 1
 VOLUME /var/run/docker.sock
 USER root
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg && \
