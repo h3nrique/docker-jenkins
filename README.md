@@ -1,3 +1,3 @@
 # docker-jenkins
 
-Version: 2.346.1
+Version: 2.346.3
